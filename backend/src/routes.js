@@ -9,6 +9,7 @@ const routes = express.Router();
 /****************** ONGs ******************/ 
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create);
+routes.delete('/ongs', OngController.delete);
 
 /************************ Incidents ************************/
 routes.get('/incidents', IncidentController.index);

@@ -23,5 +23,13 @@ module.exports = {
         });
 
         return resp.json({id});
+    },
+
+    async delete(req, resp) {
+        const id = req.headers.authorization;
+        
+        await connection('ongs').where('id', id).delete();
+
+        return resp.status(204).send();
     }
 };
