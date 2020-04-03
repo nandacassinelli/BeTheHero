@@ -1,3 +1,4 @@
+// npx knex migrate:make create_incidents
 
 exports.up = function(knex) {
     return knex.schema.createTable('incidents', function(table){
